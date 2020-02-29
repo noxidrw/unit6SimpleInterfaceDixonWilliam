@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnTextTayler;
     ImageButton btnCallJessy;
     Button btnTextJessy;
+    //String jody = getResources().getString(R.string.Jody);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // When button is clicked
                 Intent textIntent = new Intent(Intent.ACTION_VIEW);
-                textIntent.setData(Uri.parse("sms:" + "5862562334"));
+                textIntent.setData(Uri.parse("sms:" + getResources().getString(R.string.Jody)));
                 textIntent.putExtra("sms_body", "Hi");
                 // check for SMS APP
                 PackageManager packageManager = getPackageManager();
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         btnCallSarah.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // When button is clicked
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.Jody)));
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.Sarah)));
                 // check for calendar app
                 PackageManager packageManager = getPackageManager();
                 List activities = packageManager.queryIntentActivities(callIntent,
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // When button is clicked
                 Intent textIntent = new Intent(Intent.ACTION_VIEW);
-                textIntent.setData(Uri.parse("sms:" + "5862562334"));
+                textIntent.setData(Uri.parse("sms:" + getResources().getString(R.string.Sarah)));
                 textIntent.putExtra("sms_body", "Hi");
                 // check for SMS APP
                 PackageManager packageManager = getPackageManager();
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         btnCallTayler.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // When button is clicked
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.Jody)));
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.Tayler)));
                 // check for calendar app
                 PackageManager packageManager = getPackageManager();
                 List activities = packageManager.queryIntentActivities(callIntent,
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // When button is clicked
                 Intent textIntent = new Intent(Intent.ACTION_VIEW);
-                textIntent.setData(Uri.parse("sms:" + "5862562334"));
+                textIntent.setData(Uri.parse("sms:" + getResources().getString(R.string.Tayler)));
                 textIntent.putExtra("sms_body", "Hi");
                 // check for SMS APP
                 PackageManager packageManager = getPackageManager();
@@ -152,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         btnCallJessy.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // When button is clicked
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.Jody)));
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getResources().getString(R.string.Jessy)));
                 // check for calendar app
                 PackageManager packageManager = getPackageManager();
                 List activities = packageManager.queryIntentActivities(callIntent,
@@ -170,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // When button is clicked
                 Intent textIntent = new Intent(Intent.ACTION_VIEW);
-                textIntent.setData(Uri.parse("sms:" + "5862562334"));
+                textIntent.setData(Uri.parse("sms:" + getResources().getString(R.string.Jessy)));
                 textIntent.putExtra("sms_body", "Hi");
                 // check for SMS APP
                 PackageManager packageManager = getPackageManager();
